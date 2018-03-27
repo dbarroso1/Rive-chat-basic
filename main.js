@@ -1,27 +1,19 @@
-const { app, BrowserWindow } = require('electron')
+
 const Readline = require('readline');
 const RiveScript = require('rivescript');
 const chalk = require('chalk');
 const log = console.log;
 
 const bot = new RiveScript();
-const rl = Readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
-
+const rl = Readline.createInterface({ input: process.stdin, output: process.stdout });
 
 // RiveScript Loader
 bot.loadFile([
     './training data/begin.rive',
     './training data/personal.rive',
     './training data/training_data.rive'
-], function () {
-    bot.sortReplies();
-    ask();
-}, function (error) {
-    log("Error: " + error)
-});
+], function () { bot.sortReplies(); ask(); },
+    function (error) { log("Error: " + error) });
 
 function ask() {
     rl.question('You: ', (message) => {
@@ -30,10 +22,11 @@ function ask() {
         ask();
     })
 }
-/**
- * Electron
- *
-function createWindow() {
+/*
+ Electron
+
+ const { app, BrowserWindow } = require('electron')
+ function createWindow() {
     // Create the browser window.
     win = new BrowserWindow({
         width: 925,

@@ -20,7 +20,8 @@ Each word in the Input Phrase is seperated from the whole, given a corresponding
 
 <table>
 <tr>
-<td colspan="6">Hey, I think you suck.</td>
+<th colspan="1">Complete Phrase</th>
+<td colspan="5">Hey, I think you suck.</td>
 </tr>
 <tr>
 <th>Phrases</th>
