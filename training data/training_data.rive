@@ -1,0 +1,40 @@
+! version = 2.0
+/*
+Training Data
+Used for dev purposes
+*/
++ *
+- did you say something? {weight=10}
+- I dont understand {weight=10}
+- I think you misspelled something... {weight=10}
+- im not sure i understand... {weight=10}
+- say what now? {weight=10}
+- what do you mean by <star1>? {weight=50}
+
+
++ what is your name
+- You can call me <bot name>.
+- They call me, <bot name>.
+
++ * age
+- i am currently <bot age> day old.
+
++ how old are you
+- <bot age>
+
++ hello
+- hello human
+- 'sup human
+- hello, sir
+
++ (hey|hi|howdy|yo)
+@ hello
+
++ (hey|hi|howdy|yo) *
+@ hello
+
++ * (fag|jerk|ass|cunt)
+- Excuse me? 
+- That is no way to speak to an AI.
+- wow, how disrespectful
+- no u.
