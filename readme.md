@@ -1,4 +1,4 @@
-# Morti-OS Relationship Trained Communications (RTC) Module
+# Morti-OS Relationship Trained Communication (RTC) Module
 The RTC Module is used by Morti as its main method of communication with the User. The goal of the RTC Module is to process User inputs, and define the context of said input, while calculating an emotional value (1-10) to the expression given.
 
 ```
@@ -19,6 +19,9 @@ Morti is planned to have a vast array of emotional responses. Although the amoun
 Each word in the Input Phrase is seperated from the whole, given a corresponding Emotional Weight, and is then its averaged out to find the phrases Emotional Score.
 
 <table>
+<tr>
+<td colspan="6">Hey, I think you suck.</td>
+</tr>
 <tr>
 <th>Phrases</th>
 <td>Hey, </td>
