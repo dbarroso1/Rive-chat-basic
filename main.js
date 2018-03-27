@@ -1,4 +1,3 @@
-
 const Readline = require('readline');
 const RiveScript = require('rivescript');
 const chalk = require('chalk');
