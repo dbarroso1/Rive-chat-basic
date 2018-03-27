@@ -1,0 +1,15 @@
+! version = 2.0
+
++ hello
+- hello human
+- 'sup human
+- hello, sir
+
++ hello *
+@ hello
+
++ (hey|hi|howdy|yo)
+@ hello
+
++ (hey|hi|howdy|yo) *
+@ hello

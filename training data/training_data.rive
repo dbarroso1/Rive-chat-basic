@@ -11,30 +11,52 @@ Used for dev purposes
 - say what now? {weight=10}
 - what do you mean by <star1>? {weight=50}
 
-
-+ what is your name
-- You can call me <bot name>.
-- They call me, <bot name>.
-
-+ * age
-- i am currently <bot age> day old.
-
-+ how old are you
-- <bot age>
-
-+ hello
-- hello human
-- 'sup human
-- hello, sir
-
-+ (hey|hi|howdy|yo)
-@ hello
-
-+ (hey|hi|howdy|yo) *
-@ hello
-
 + * (fag|jerk|ass|cunt)
 - Excuse me? 
 - That is no way to speak to an AI.
 - wow, how disrespectful
 - no u.
+
++ knock knock
+- Who's there?
+
++ *
+% who is there
+- <star> who?
+
++ *
+% * who
+- LOL! <star>! That's funny!
+- Haha! nice
+- Oh yeah i get it... 
+- ...Well you gave it your best!
+
++ can i ask you a question
+- sure, whats up?
+- anything master.
+- if you'd like.
+
++ my name is *
+- <set name=<star>>It's nice to meet you, <get name>.
+
++ dont know
+- i dunno
+
++ what is my name
+* <get name> == undefined => I won't know unless you tell me...
+- you should know this <get name>
+- it's <get name>
+- Your name is <get name>, silly!
+
++ i am # years old
+- <set age=<star>>good to know you're <get age> years old.
+
++ what am i old enough to do
+* <get age> == undefined => I don't know how old you are.
+* <get age> >  25 => You can do anything you want.
+* <get age> == 25 => You're old enough to rent a car with no extra fees.
+* <get age> >  21 => You're old enough to drink, but not rent a car.
+* <get age> == 21 => You're exactly old enough to drink.
+* <get age> >  18 => You're old enough to gamble, but not drink.
+* <get age> == 18 => You're exactly old enough to gamble.
+- You're not old enough to do much of anything yet.

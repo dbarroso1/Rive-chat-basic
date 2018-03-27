@@ -3,21 +3,27 @@ const RiveScript = require('rivescript');
 const chalk = require('chalk');
 const log = console.log;
 
-const bot = new RiveScript();
-const rl = Readline.createInterface({ input: process.stdin, output: process.stdout });
+log(chalk.green('#====================================================#'))
+log('Morti-OS: RTC Module has started'+ (chalk.green(' Succesfully')))
+log('Morti is awake! Say Hi!')
+log(chalk.green('#====================================================#'))
 
 // RiveScript Loader
+const bot = new RiveScript();
+const rl = Readline.createInterface({ input: process.stdin, output: process.stdout });
 bot.loadFile([
-    './training data/begin.rive',
-    './training data/personal.rive',
+    './training data/begin.rive', 
+    './training data/greetings.rive', 
+    './training data/personality.rive', 
     './training data/training_data.rive'
-], function () { bot.sortReplies(); ask(); },
+],
+    function () { bot.sortReplies(); ask(); },
     function (error) { log("Error: " + error) });
 
 function ask() {
-    rl.question('You: ', (message) => {
+    rl.question('[You] ', (message) => {
         var reply = bot.reply('local-user', message);
-        log(chalk.red('bot: ') + chalk.white(reply))
+        log(chalk.blue('[Morti] ') + chalk.white(reply));
         ask();
     })
 }
